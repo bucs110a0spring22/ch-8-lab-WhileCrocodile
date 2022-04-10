@@ -18,8 +18,7 @@ class StringUtility:
 
   def bothEnds(self):
     new_string = ""
-    new_string += self.string[:2]
-    new_string += self.string[-2:]
+    new_string += self.string[:2] + self.string[-2:]
     return new_string
 
   def fixStart(self):
@@ -54,6 +53,27 @@ class StringUtility:
       else:
         new_string += letter
     return new_string
+
+    # an alternative cipher function that uses division instead 
+    # of while loops to loops letters around from z --> a
+    # this variant was used to write the one line cipher function
+    # def cipher(self):
+    # new_string = ""
+    # for letter in self.string:
+    #   if letter.isalpha():
+    #     new_letter = ord(letter) + len(self.string)
+    #     if letter.isupper():
+    #       # the number of times the new letter loops from z to a
+    #       letter_loop = int((new_letter-65)/26)
+    #       new_letter -= 26*(letter_loop)
+    #     elif letter.islower():
+    #       letter_loop = int((new_letter-97)/26)
+    #       new_letter -= 26*(letter_loop)
+    #     new_letter = chr(new_letter)
+    #     new_string += new_letter
+    #   else:
+    #     new_string += letter
+    # return new_string
 
 def main():
   utility = StringUtility("watermelon")

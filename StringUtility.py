@@ -18,21 +18,7 @@ class StringUtility:
     return sum([ord(letter) for letter in self.string])
 
   def cipher(self):
-    new_string = ""
-    for letter in self.string:
-      if letter.isalpha():
-        new_letter = ord(letter) + len(self.string)
-        if letter.isupper() and new_letter > 90:
-          while new_letter > 90:
-            new_letter -= 26
-        elif letter.islower() and new_letter > 122:
-          while new_letter > 122:
-            new_letter -= 26
-        new_letter = chr(new_letter)
-        new_string += new_letter
-      else:
-        new_string += letter
-    return new_string
+ 		return "".join([chr((ord(letter) + len(self.string) - (int(((ord(letter) + len(self.string))-65)/26)*26))) if letter.isupper() else (chr(ord(letter) + len(self.string) - (int(((ord(letter) + len(self.string))-97)/26)*26))) if letter.isalpha() else letter for letter in self.string])
 
 def main():
   utility = StringUtility("watermelon")

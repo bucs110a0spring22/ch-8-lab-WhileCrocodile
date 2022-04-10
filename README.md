@@ -20,6 +20,7 @@ N/A
 
 ## REFERENCES:
 Python documentation for string methods.
+Python documentation for list methods.
 
 ## MISCELLANEOUS COMMENTS:
 StringUtility methods before compression into 1 line are located in StringUtilityOriginal.
