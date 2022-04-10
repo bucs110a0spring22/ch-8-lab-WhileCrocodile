@@ -6,16 +6,37 @@ class StringUtility:
     return self.string
 
   def vowels(self):
-    return "many" if len([letter for letter in self.string if letter in "aeiouAEIOU"]) >= 5 else str(len([letter for letter in self.string if letter in "aeiouAEIOU"]))
+    vowels = "aeiouAEIOU"
+    vowel_count = 0
+    for letter in self.string:
+      if letter in vowels:
+        vowel_count += 1
+    if vowel_count >= 5:
+      return "many"
+    else:
+      return str(vowel_count)
 
   def bothEnds(self):
-    return self.string[:2] + self.string[-2:]
+    new_string = ""
+    new_string += self.string[:2]
+    new_string += self.string[-2:]
+    return new_string
 
   def fixStart(self):
-    return self.string[:1] + "".join(["*" if self.string[index] == self.string[:1] else self.string[index] for index in range(1, len(self.string))])
+    first_char = self.string[:1]
+    new_string = self.string[:1]
+    for index in range(1, len(self.string)):
+      if self.string[index] == first_char:
+        new_string += "*"
+      else:
+        new_string += self.string[index]
+    return new_string
 
   def asciiSum(self):
-    return sum([ord(letter) for letter in self.string])
+    sum = 0
+    for letter in self.string:
+      sum += ord(letter)
+    return sum
 
   def cipher(self):
     new_string = ""
