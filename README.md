@@ -22,4 +22,5 @@ N/A
 Python documentation for string methods.
 
 ## MISCELLANEOUS COMMENTS:
-N/A
+StringUtility methods before compression into 1 line are located in StringUtilityOriginal.
+StringUtility methods after compression are located in StringUtility, which is imported in main.py (Extra credit! :D).
