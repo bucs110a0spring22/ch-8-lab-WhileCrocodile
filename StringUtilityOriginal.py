@@ -1,5 +1,11 @@
+# These are the functions I originally wrote for StringUtility.
+# They are not imported into main.py, and are thus unused.
+# However, I wanted to keep them around in case anyone
+# wanted a more readable version of the compressed methods in 
+# StringUtility.
+
 class StringUtility:
-  def __init__(self, string):
+  def __init__(self, string="string"):
     self.string = string
 
   def __str__(self):
