@@ -26,4 +26,5 @@ Python documentation for list methods.
 StringUtility methods before compression into 1 line are located in StringUtilityOriginal.
 StringUtility methods after compression are located in StringUtility, which is imported in main.py (Extra credit! :D). 
 
-All five of them have been compressed to one return line.
+All five StringUtility methods have been compressed to one return line.
+For comments on the code, check StringUtilityOriginal (since that's pretty much the only place with readable, multi-line functions).
