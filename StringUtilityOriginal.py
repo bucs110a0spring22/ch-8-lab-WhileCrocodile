@@ -48,10 +48,10 @@ class StringUtility:
     for letter in self.string:
       if letter.isalpha():
         new_letter = ord(letter) + len(self.string)
-        if letter.isupper() and new_letter > 90:
+        if letter.isupper() and new_letter > 90:      # 90 is ord("Z")
           while new_letter > 90:
-            new_letter -= 26
-        elif letter.islower() and new_letter > 122:
+            new_letter -= 26                          # 26 chars in alphabet
+        elif letter.islower() and new_letter > 122:   # 122 is ord("z")
           while new_letter > 122:
             new_letter -= 26
         new_letter = chr(new_letter)
@@ -69,11 +69,11 @@ class StringUtility:
     #   if letter.isalpha():
     #     new_letter = ord(letter) + len(self.string)
     #     if letter.isupper():
-    #       # the number of times the new letter loops from z to a
-    #       letter_loop = int((new_letter-65)/26)
-    #       new_letter -= 26*(letter_loop)
+    #       # the number of times the new letter loops from z --> a
+    #       letter_loop = int((new_letter-65)/26)    # 65 is ord("A")
+    #       new_letter -= 26*(letter_loop)           # 26 chars in alphabet
     #     elif letter.islower():
-    #       letter_loop = int((new_letter-97)/26)
+    #       letter_loop = int((new_letter-97)/26)    # 97 is ord("a")
     #       new_letter -= 26*(letter_loop)
     #     new_letter = chr(new_letter)
     #     new_string += new_letter
